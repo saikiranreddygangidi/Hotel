@@ -1,0 +1,38 @@
+<html>
+    <head><title>Hotel</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js">
+        </script>
+        <style>
+            img{
+                width:200px;
+                height:200px;
+            }
+           
+           ul {
+    list-style-type: none;
+}
+
+        </style></head>
+    <body ng-app="">
+        <div>
+        <ul>
+            <li>
+        <input type="checkbox" ng-model="bread"> bread</li>
+        <li> <input type="checkbox" ng-model="milk"> milk</li>
+        <li> <input type="checkbox" ng-model="egg"> egg</li>
+        <li> <input type="checkbox" ng-model="chicken"> chicken</li>
+        <li> <input type="checkbox" ng-model="pizza"> pizza</li>
+    <li><input type="checkbox" ng-model="veg"> veg</li></ul></div>
+        <img src="bread.jpg" ng-show="bread" >
+        <img src="milk.jpg" ng-show="milk" >
+        <img src="veg_curry1.jpg" ng-show="veg && !pizza" >
+        <img src="veg_curry2.jpg" ng-show="veg && !pizza"  >
+        <img src="chicken_curry.jpg" ng-show="chicken"  >
+        <img src="chicken_pizza.jpg" ng-show="chicken && pizza"  >
+        <img src="veg_pizza.jpg" ng-show="veg && pizza" >
+        <img src="bread_egg.jpg" ng-show="bread && egg" >
+        <img src="egg_curry.jpg" ng-show="egg" >
+        
+        
+    </body>
+</html>
