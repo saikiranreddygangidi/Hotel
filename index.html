@@ -1,7 +1,24 @@
 <html>
-    <head><title>Hotel</title>
+    <head>
+        <title>Hotel</title>
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js">
         </script>
+       <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+    
+       <script type="text/javascript">
+           $( document ).ready(function() {
+    
+            $('input[name="items"]'). click(function(){
+            $('p').html("the items are:"+"<br>");
+                   $('input[name="items"]:checked').each(function() {
+                       $("p").append(this.value+"<br>");
+                   });
+    
+                  });
+    
+           });
+       </script>
+    
         <style>
             img{
                 width:200px;
@@ -11,10 +28,13 @@
            ul {
     list-style-type: none;
 }
+div{
+    float: left;
+}
 
         </style></head>
     <body ng-app="">
-        <div>
+        <div style="width:100%">
         <ul>
             <li>
         <input type="checkbox" ng-model="bread"> bread</li>
@@ -23,16 +43,12 @@
         <li> <input type="checkbox" ng-model="chicken"> chicken</li>
         <li> <input type="checkbox" ng-model="pizza"> pizza</li>
     <li><input type="checkbox" ng-model="veg"> veg</li></ul></div>
-        <img src="bread.jpg" ng-show="bread" >
-        <img src="milk.jpg" ng-show="milk" >
-        <img src="veg_curry1.jpg" ng-show="veg && !pizza" >
-        <img src="veg_curry2.jpg" ng-show="veg && !pizza"  >
-        <img src="chicken_curry.jpg" ng-show="chicken"  >
-        <img src="chicken_pizza.jpg" ng-show="chicken && pizza"  >
-        <img src="veg_pizza.jpg" ng-show="veg && pizza" >
-        <img src="bread_egg.jpg" ng-show="bread && egg" >
-        <img src="egg_curry.jpg" ng-show="egg" >
-        
-        
+    <div id="div1" style="width:100%">
+
+    </div>
+    <br>
+    <p></p>
+    <script src="test.js">
+    </script> 
     </body>
 </html>
